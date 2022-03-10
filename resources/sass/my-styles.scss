@@ -1,0 +1,526 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//font-awesome
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+//#FF2D20
+// HEX #B22222
+$laravel-red-color: #B22222;
+$grey: #808080;
+$footer-background-color: rgba(91, 92, 94, 0.459);
+$home-page-background-color: #F5F5F5;
+// body styles start
+
+body {
+    background: $home-page-background-color;
+    font-family: Titillium;
+
+    a {
+        color: #ff4534;
+    }
+
+    .mybtn {
+        background: #ffffff;
+        border: 0;
+        color: #424347;
+        letter-spacing: .1em;
+
+        &:hover {
+            background: #ff6557;
+            color: #ffffff;
+        }
+    }
+
+    // header styles start
+    .header {
+        background: $home-page-background-color;
+        // header nav styles start
+        .nav {
+            height: 70px;
+            margin-bottom: 1px;
+
+            .container {
+                .row {
+                    line-height: 70px;
+                    font-family: Titillium;
+
+                    a {
+                        color: #000000;
+                        font-weight: 600;
+                        letter-spacing: 0.1em;
+                        font-size: 1.7em;
+
+                        &:hover {
+                            text-decoration: none;
+                            color: $laravel-red-color;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+
+        .nav_dropdown {
+            margin: 0;
+
+            .nav_dropdown_menu {
+                list-style: none;
+                position: relative;
+
+                .nav_dropdown_menu_item {
+
+                    &:hover > .nav_dropdown_submenu > .nav_dropdown_submenu_item {
+                        display: block;
+                        transition: background 300ms ease-in-out;
+                    }
+
+                    .nav_dropdown_submenu {
+                        position: absolute;
+                        box-shadow: 3px 3px $grey;
+                        background: $home-page-background-color;
+                        opacity: .7;
+                        margin-top: -10px;
+                        list-style: none;
+                        border-radius: 10px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+
+                        .nav_dropdown_submenu_item {
+                            display: none;
+                            line-height: 1.3rem;
+                            font-weight: normal;
+                            padding: 5px;
+
+                            a {
+                                font-size: 1rem;
+
+                                &:hover {
+                                    color: $laravel-red-color;
+                                    transition: background 300ms ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // header nav styles end
+        // header jumbotron styles start
+        .header_jumbotron {
+            background: $laravel-red-color;
+
+            .row {
+                height: 200px;
+
+                .header_jumbotron_text {
+                    .header_jumbotron_title {
+                        margin-bottom: 20px;
+                        font-size: 1.5rem;
+
+                        a {
+                            color: #ffffff;
+                            letter-spacing: .5rem;
+                        }
+                    }
+
+                    .search_form {
+                        .header_jumbotron_input {
+                            width: 17rem;
+                        }
+
+                        .search_form__btn {
+                            margin-left: 10px;
+                            background: #ffffff;
+                            color: $laravel-red-color;
+
+                            &:hover {
+                                background: #ffb3b3;
+                                color: #ffffff;
+                                transition: background 300ms ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .jumbotron_avatar {
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            margin-bottom: 10px;
+            opacity: 1;
+        }
+
+        // header jumbotron styles end
+    }
+
+    // header styles end
+
+    .nav-menu {
+        .nav_menu_list {
+            display: flex;
+
+            .nav_menu_item {
+                list-style: none;
+                margin-right: 15px;
+
+                a {
+                    font-weight: 300;
+                    letter-spacing: .1em;
+                    font-size: 1.2em;
+                    color: #000000;
+
+                    &:hover {
+                        color: $laravel-red-color;
+                        text-decoration: none;
+                        transition: background 300ms ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .content {
+
+        .container {
+            .row {
+                color: #000000;
+
+                a {
+                    color: #ff4534;
+
+                    &:hover {
+                        transition: background 300ms ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    // contact
+    .contact {
+        .contact-form-size {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .mybtn {
+            width: 70px;
+            height: 35px;
+        }
+    }
+
+    // content background color
+    .page_content {
+        background: $home-page-background-color;
+
+        // home page posts styles start
+        .home_page_title {
+            padding-top: 20px;
+        }
+
+        .home_post_list {
+            padding: 20px;
+            font-size: 0.8rem;
+            box-shadow: 3px 3px $grey;
+            margin-top: 20px;
+            margin-bottom: 40px;
+
+            .home_post_item {
+                background: #ffffff;
+
+                .home_post_text {
+                    background: #ffe6e6;
+                    margin-bottom: 15px;
+                }
+
+                a {
+                    margin-top: 10px;
+
+                    &:hover {
+                        transition: background 300ms ease-in-out;
+                    }
+                }
+
+                .edit_link {
+                    border-top: 1px solid $grey;
+                    font-size: 0.9rem;
+                    margin-top: 20px;
+
+                    ul {
+                        list-style: none;
+
+                        li {
+                            margin-left: -10px;
+
+                            a {
+
+                                &:hover {
+                                    transition: background 300ms ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // home page posts styles end
+    }
+    .content-width {
+        width: 100%;
+    }
+
+    // posts page  styles start
+    .post_page_title {
+        padding-top: 20px;
+    }
+
+    .post_item {
+        background: #ffffff;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        padding: 20px;
+        box-shadow: 5px 7px 8px 7px #888888cb;
+
+        .edit_link {
+            display: flex;
+            justify-content: space-between;
+            ul {
+                list-style: none;
+            }
+        }
+    }
+
+    // posts page  styles end
+
+    // left sidebar styles start
+    .left_sidebar {
+        padding-top: 20px;
+        align-content: center;
+
+        ul {
+            list-style: none;
+        }
+    }
+
+    // left sidebar styles end
+
+    // footer styles start
+    .footer {
+        // background: $footer-background-color;
+        min-height: 250px;
+        padding-top: 20px;
+
+        .row {
+            .footer_card {
+                border: none;
+
+                .footer_card_item {
+
+                    .footer_card_text {
+                        margin-bottom: 10px;
+                    }
+
+                    .footer_card_links {
+                        ul {
+                            list-style: none;
+                        }
+                    }
+
+                    a {
+                        color: $laravel-red-color;
+
+                        &:hover {
+                            text-decoration: underline;
+                            transition: background 300ms ease-in-out;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .footer-copy {
+            margin-top: 10px;
+
+            p {
+                color: #000000;
+            }
+
+            a {
+                color: $laravel-red-color;
+
+                &:hover {
+                    text-decoration: underline;
+                    transition: background 300ms ease-in-out;
+                }
+            }
+        }
+    }
+
+    // footer styles end
+}
+// body styles end
+.footer {
+    background: $footer-background-color;
+    min-height: 250px;
+    padding-top: 20px;
+
+    .row {
+        .footer_card {
+            border: none;
+
+            .footer_card_item {
+
+                .footer_card_text {
+                    margin-bottom: 10px;
+                }
+
+                .footer_card_links {
+                    ul {
+                        list-style: none;
+                    }
+                }
+
+                a {
+                    color: $laravel-red-color;
+
+                    &:hover {
+                        text-decoration: underline;
+                        transition: background 300ms ease-in-out;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .footer-copy {
+        margin-top: 10px;
+
+        p {
+            color: #000000;
+        }
+
+        a {
+            color: $laravel-red-color;
+
+            &:hover {
+                text-decoration: underline;
+                transition: background 300ms ease-in-out;
+            }
+        }
+    }
+}
+
+.icon-cursor {
+
+    cursor: pointer;
+}
+
+.category_list_title{
+    margin-top: 15px;
+}
+.posts-more-banner {
+    background-color: #fa3d2cb7;
+    color: #ffffff;
+    padding-top:15px ;
+    padding-bottom: 15px;
+    letter-spacing: .4rem;
+
+    a {
+        color: #00000063;
+    }
+    a:hover {
+        color:rgba(251, 251, 255, 0.808) ;
+    }
+}
+
+.posts-view {
+
+    padding-top: 30px;
+    border-bottom: 1px solid #00000046;
+}
+
+.post-view-link {
+    margin-left: 5px;
+    margin-bottom:10px;
+    margin-top:10px;
+     a {
+         margin-left: 5px;
+         margin-right: 7px;
+     }
+}
+
+
+.pagination-links {
+    color: $laravel-red-color;
+    padding-bottom: 55px;
+    a {
+        color: $laravel-red-color;
+        &:hover {
+            background-color: $laravel-red-color;
+            color: #ffffff;
+        }
+    }
+}
+
+.pagination-links-header {
+    color: $laravel-red-color;
+    a {
+        color: $laravel-red-color;
+        &:hover {
+            background-color: $laravel-red-color;
+            color: #ffffff;
+        }
+    }
+}
+
+.page-title {
+    letter-spacing: 0.3rem;;
+}
+
+
+.post_title {
+    letter-spacing: .15rem;
+    a{
+        color: #000000;
+
+    }
+}
+
+
+.login-page-table{
+    box-shadow: 5px 7px 8px 7px #888888cb;
+}
+
+.footer-text-title {
+    color: #FFFFFF;
+}
+
+.footer-contact-link {
+    ul {
+        list-style: none;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
